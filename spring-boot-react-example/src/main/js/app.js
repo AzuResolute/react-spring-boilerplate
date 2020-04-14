@@ -7,6 +7,7 @@ import history from './history'
 class App extends Component {
 
 	render() {
+		console.log(document.URL)
 		return (
 			<Routes/>
 		)

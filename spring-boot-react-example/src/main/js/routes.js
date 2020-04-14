@@ -10,8 +10,8 @@ class Routes extends Component {
 
     return (
       <Switch>
-        <Route path="/" component={Home} />
         <Route path="/program" component={Program} />
+        <Route path="/" component={Home} />
         {/* <Route component={Home} /> */}
       </Switch>
     )
@@ -19,8 +19,3 @@ class Routes extends Component {
 }
 
 export default withRouter(Routes);
-
-// Routes.propTypes = {
-//   loadInitialData: PropTypes.func.isRequired,
-//   isLoggedIn: PropTypes.bool.isRequired
-// }
