@@ -29,3 +29,13 @@ build/
 
 ### VS Code ###
 .vscode/
+node_modules
+bundle.js
+bundle.js.map
+secrets.js
+.DS_Store
+npm-debug.log
+yarn-error.log
+sample/
+initLoad.js
+

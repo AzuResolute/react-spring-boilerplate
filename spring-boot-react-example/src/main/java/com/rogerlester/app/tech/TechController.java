@@ -16,13 +16,24 @@ public class TechController {
         this.repo = repo;
     }
 
-    @GetMapping("/techstack")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/api/techstack")
+    @CrossOrigin(origins = "http://localhost:7777")
     public Collection<Tech> getAll() {
             return
                     StreamSupport
                             .stream(
                                 repo.findAll().spliterator(), false)
                             .collect(Collectors.toList());
+    }
+
+    @GetMapping("/api/techstack")
+    @CrossOrigin(origins = "http://localhost:7777")
+    public Collection<Tech> getJava() {
+        return
+                StreamSupport
+                        .stream(
+                                repo.findAll().spliterator(), false)
+                        .filter(t -> t.getLanguage() == "Java")
+                        .collect(Collectors.toList());
     }
 }
