@@ -5,7 +5,7 @@ export default class TechStack extends Component {
     render() {
         
         const techStack = this.props.techStack.map(t => 
-            <Tech key={t.id} tech={t} />
+            <Tech key={t.name} tech={t} />
         )
         
         return (

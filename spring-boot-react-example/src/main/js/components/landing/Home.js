@@ -10,8 +10,11 @@ export default class Home extends Component {
     }
     
 	componentDidMount = async () => {
-		const {data} = await axios.get(`/api/techstack`);
-        this.setState({techStack: data});
+        const {data} = await axios.get(`/api/teches`);
+        const techStack = data._embedded.teches
+        console.log(data);
+        console.log(techStack);
+        this.setState({techStack});
 	}
 
     render() {

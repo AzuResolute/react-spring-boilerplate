@@ -9,7 +9,6 @@ public class HomeController {
 
     @RequestMapping(value = "{^((?!api).)*$}")
     public String redirectIfNotApi() {
-        System.out.println("Route to React anything except /api");
         return "forward:/";
     }
 
