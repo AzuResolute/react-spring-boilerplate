@@ -17,7 +17,7 @@ public class TechController {
     }
 
     @GetMapping("/api/techstack")
-    @CrossOrigin(origins = "http://localhost:7777")
+//    @CrossOrigin(origins = "http://localhost:7777")
     public Collection<Tech> getAll() {
             return
                     StreamSupport
@@ -26,8 +26,8 @@ public class TechController {
                             .collect(Collectors.toList());
     }
 
-    @GetMapping("/api/techstack")
-    @CrossOrigin(origins = "http://localhost:7777")
+    @GetMapping("/api/techstack/java")
+//    @CrossOrigin(origins = "http://localhost:7777")
     public Collection<Tech> getJava() {
         return
                 StreamSupport

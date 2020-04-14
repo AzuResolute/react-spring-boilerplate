@@ -1,29 +1,21 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import TechStack from "./components/tech/TechStack";
-import axios from 'axios'
+import {Router} from 'react-router-dom'
+import Routes from './routes';
+import history from './history'
 
 class App extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {techStack: []};
-	}
-
-	componentDidMount = async () => {
-		const {data} = await axios.get(`/api/techstack`);
-		console.log(data)
-        this.setState({techStack: data});
-	}
-
 	render() {
 		return (
-			<TechStack techStack={this.state.techStack}/>
+			<Routes/>
 		)
 	}
 }
 
 ReactDOM.render(
-	<App />,
+	<Router history={history}>
+		<App />
+	</Router>,
 	document.getElementById('react')
 )
